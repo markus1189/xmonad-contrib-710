@@ -1,4 +1,5 @@
 {-# OPTIONS -fno-warn-missing-signatures #-}
+{-# LANGUAGE FlexibleContexts #-}
 ----------------------------------------------------------------------------
 -- |
 -- Module      :  XMonad.Config.Bluetile

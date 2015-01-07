@@ -28,7 +28,7 @@ module XMonad.Util.Invisible (
 -- Invisible derives trivial definitions for Read and Show, so the wrapped data
 -- type need not do so.
 
-newtype Invisible m a = I (m a) deriving (Monad, Functor)
+newtype Invisible m a = I (m a) deriving (Monad, Applicative, Functor)
 
 instance (Functor m, Monad m) => Read (Invisible m a) where
     readsPrec _ s = [(fail "Read Invisible", s)]

@@ -270,6 +270,7 @@ data DecodeState = DecS {value :: Raw           -- unconsumed raw property value
 newtype Decoder a = Decoder (ReaderT Decode (StateT DecodeState X) a)
 #ifndef __HADDOCK__
     deriving (Functor
+             ,Applicative
              ,Monad
              ,MonadIO
              ,MonadState  DecodeState
