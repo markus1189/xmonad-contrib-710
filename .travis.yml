@@ -16,12 +16,16 @@ before_install:
 install:
  - sudo apt-get install -qq cabal-install-$CABALVER ghc-$GHCVER
  - export PATH="/opt/cabal/$CABALVER/bin:/opt/ghc/$GHCVER/bin:$PATH"
+ - git clone http://github.com/markus1189/xmonad-710 xmonad-710
+ - ( cd xmonad-710 && cabal install )
 
 before_script:
  - cabal --version
  - cabal update
  - ghc --version
  - ghc-pkg list
+ - cabal sandbox init
+ - cabal sandbox add-source xmonad-710
 
 script:
  - cabal install --enable-documentation
