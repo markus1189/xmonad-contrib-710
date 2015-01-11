@@ -28,6 +28,8 @@ module XMonad.Util.Invisible (
 -- Invisible derives trivial definitions for Read and Show, so the wrapped data
 -- type need not do so.
 
+import Control.Applicative (Applicative)
+
 newtype Invisible m a = I (m a) deriving (Monad, Applicative, Functor)
 
 instance (Functor m, Monad m) => Read (Invisible m a) where
