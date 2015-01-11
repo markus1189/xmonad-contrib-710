@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/markus1189/xmonad-contrib-710.svg?branch=master)](https://travis-ci.org/markus1189/xmonad-contrib-710)
+
 # About
 
 This is a fork of the original xmonad-contrib package fixed to work with ghc 7.10.
